@@ -14,11 +14,11 @@ import {WeatherItem} from "./weather-item";
 </article>
     `,
     styleUrls: ['/src/weather-item.css'],
-    inputs: ['weatherItem: item']
+    // inputs: ['weatherItem: item']
 })
 
 export class WeatherItemComponent{
-    // @Input('item')
+    @Input('item')
     weatherItem: WeatherItem;
 
     constructor(){
