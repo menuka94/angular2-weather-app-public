@@ -1,20 +1,20 @@
 import {Component} from 'angular2/core';
-import {WeatherListComponent} from "./weather/weather-list.component";
-import {WeatherSearchComponent} from "./weather/weather-search.component";
+import {CourseComponent} from "./courses/course.component";
+import {ListComponent} from "./courses/list.component";
+import {AddCourseComponent} from "./courses/add-course.component";
 
 @Component({
     selector: 'my-app',
-    template: `
-        <header>
-            <h1>Angular 2 Weather</h1>
-        </header>
-        <div class="container">
-            <weather-search></weather-search>
-            <weather-list></weather-list>
+    template: `<div class="container" style="padding: 20px">
+    <div class="row">
+        <course-component></course-component>
+        <list-component></list-component>
+        <div class="col-md-4 col-md-offset-3">
+            <!--<add-course></add-course>-->
         </div>
-        
-    `,
-    directives: [WeatherListComponent, WeatherSearchComponent]
+    </div>
+</div>`,
+    directives: [CourseComponent, ListComponent, AddCourseComponent]
 })
 
 export class AppComponent {
